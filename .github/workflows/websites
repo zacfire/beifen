@@ -1,0 +1,10 @@
+{
+  test: (string) => boolean, // 给定一个网址，用来检测属不属于当前配置的网站
+  process: (string) => { // 给定一个网址，抓取文章内容，返回值应为一个对象
+    title: string,
+    author: string || null,
+    dom: HTMLElement, // 代表文章内容的jsdom对象
+    date: string || null // 文章在原网站上的日期
+  }
+  samples: Array<string> // 示例网址的链接
+}
